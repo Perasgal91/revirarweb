@@ -1,9 +1,9 @@
 {
-  "short_name": "Revirar Casas",
-  "name": "Revirar Casas - Compramos Viviendas",
+  "short_name": "Vende Vivienda Coruña",
+  "name": "Vende Vivienda Coruña - Compramos Viviendas",
   "icons": [
     {
-      "src": "logoRevirar.png",
+      "src": "logo-white.png",
       "type": "image/png",
       "sizes": "910x902"
     },
