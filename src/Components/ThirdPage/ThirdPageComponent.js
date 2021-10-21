@@ -1,21 +1,19 @@
-import "./SecondPageStyles.css";
+import "./ThirdPageStyles.css";
 import "react-app-polyfill/ie11";
 
 import {Component} from "react";
 import {withRouter} from "react-router-dom";
- class SecondPageComponent extends Component{
+import {send} from "emailjs-com";
+ class ThirdPageComponent extends Component{
 
      constructor(props) {
          super(props);
-         this.state = {meters: '',
-             rooms:'',
-             exterior:'',
-             bathrooms:'',
-         boughtAt:'',
-         condition:'',
-         liveIn:'',
-         valuePrice:'',
-         valuePriceReason:'',};
+         this.state = {priorRenovation: '',
+             renovationSummary:'',
+             callTime:'',
+             whenSell:'',
+         whySell:'',
+         minimumPrice:''};
 
          this.handleChange = this.handleChange.bind(this);
          this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,100 +30,87 @@ import {withRouter} from "react-router-dom";
      }
 
      handleSubmit(event) {
-         alert('A name was submitted: ' + this.state.name);
          event.preventDefault();
-         this.props.history.push("/third");
+         const data = {
+             priorRenovation: this.state.priorRenovation,
+             renovationSummary: this.state.renovationSummary,
+             callTime: this.state.callTime,
+             whenSell: this.state.whenSell,
+             whySell: this.state.whySell,
+             minimumPrice: this.state.minimumPrice
+         }
+         send('service_eboaerg', 'template_04sn06s', data, 'user_CFcGpnhJSDxRrmxNHmhVN')
+             .then((result) => {
+                 this.props.history.push("/");
+             }, (error) => {
+                 alert("Inténtelo de nuevo, ha habido un error");
+             });
      }
 
      render() {
          return (
                      <form onSubmit={this.handleSubmit}>
                          <label>
-                             Metros Cuadrados:
+                             Hubo alguna reforma anterior?:
                              <input
                                  type="text"
-                                 id="meters"
-                                 name="meters"
-                                 placeholder=""
+                                 id="priorRenovation"
+                                 name="priorRenovation"
+                                 placeholder=""onChange={this.handleChange}
                              />
                          </label>
 
                          <label>
-                             Habitaciones:
+                             Qué reformas necesita a simple vista:
                              <input
                                  type="text"
-                                 id="rooms"
-                                 name="rooms"
-                                 placeholder=""
+                                 id="renovationSummary"
+                                 name="renovationSummary"
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
-                             Cuantas habitaciones son exteriores:
+                             Cuánto es lo mínimo que aceptaría por la vivienda?:
                              <input
                                  type="text"
-                                 id="exterior"
-                                 name="exterior"
-                                 placeholder=""
+                                 id="minimumPrice"
+                                 name="minimumPrice"
+                                 placeholder=""onChange={this.handleChange}
                              />
                          </label>
 
                          <label>
-                             Baños:
+                             Por qué vender en este momento?:
                              <input
                                  type="text"
-                                 id="bathrooms"
-                                 name="bathrooms"
-                                 placeholder=""
+                                 id="whySell"
+                                 name="whySell"
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
-                             Desde qué año te pertenece:
+                             En cuanto tiempo le gustaría vender su vivienda?:
                              <input
                                  type="text"
-                                 id="boughtAt"
-                                 name="boughtAt"
-                                 placeholder=""
+                                 id="whenSell"
+                                 name="whenSell"
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
-                             Cuál es el estado de la vivienda:
+                             Cuál es la mejor franja horaria para llamarle:
                              <input
                                  type="text"
-                                 id="condition"
-                                 name="condition"
-                                 placeholder=""
+                                 id="callTime"
+                                 name="callTime"
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
-                         <label>
-                             Vives en la vivienda:
-                             <input
-                                 type="text"
-                                 id="liveIn"
-                                 name="liveIn"
-                                 placeholder=""
-                             /></label>
 
-                         <label>
-                             Qué valor tiene para usted la vivienda:
-                             <input
-                                 type="text"
-                                 id="valuePrice"
-                                 name="valuePrice"
-                                 placeholder=""
-                             /></label>
-                         <label>
-                             Porqué piensa que tiene ese valor:
-                             <input
-                                 type="text"
-                                 id="valuePriceReason"
-                                 name="valuePriceReason"
-                                 placeholder=""
-                             /></label>
-
-                         <input type="submit" value="Pedir Oferta"/>
+                         <input type="submit" value="Finalizar Proceso"/>
                      </form>
          );
      }
 }
 
-export default withRouter(SecondPageComponent);
+export default withRouter(ThirdPageComponent);

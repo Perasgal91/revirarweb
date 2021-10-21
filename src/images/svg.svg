@@ -3,15 +3,15 @@
  <g>
   <title>Layer 1</title>
   <g stroke="null" id="svg_10">
-   <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="474.51803" x2="124.18129" y1="167.75581" x1="124.18129" fill="#6D97AB"/>
-   <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="581.90607" x2="266.7582" y1="458.04805" x1="100.63648" fill="#6D97AB"/>
-   <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="463.55141" x2="400.17878" y1="163.88525" x1="400.17878" fill="#6D97AB"/>
-   <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="445.08281" x2="422.05678" y1="579.38911" x1="264.50086" fill="#6D97AB"/>
+   <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="474.51803" x2="124.18129" y1="167.75581" x1="124.18129" fill="#6D97AB"/>
+   <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="581.90607" x2="266.7582" y1="458.04805" x1="100.63648" fill="#6D97AB"/>
+   <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="463.55141" x2="400.17878" y1="163.88525" x1="400.17878" fill="#6D97AB"/>
+   <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="445.08281" x2="422.05678" y1="579.38911" x1="264.50086" fill="#6D97AB"/>
    <g stroke="null" transform="matrix(-1.30804 0 0 -1.29019 1274.93 558.223)" id="svg_9">
-    <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="317.27038" x2="458.01691" y1="79.50481" x1="458.01691" fill="#6D97AB"/>
-    <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="400.50481" x2="567.01691" y1="304.50481" x1="440.0169" fill="#6D97AB"/>
-    <line stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="308.77037" x2="669.01691" y1="76.50481" x1="669.01691" fill="#6D97AB"/>
-    <line transform="rotate(-77.9205 625.517 346.505)" stroke="#000" stroke-width="5" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="394.50481" x2="689.01691" y1="298.50481" x1="562.0169" fill="#6D97AB"/>
+    <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="317.27038" x2="458.01691" y1="79.50481" x1="458.01691" fill="#6D97AB"/>
+    <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="400.50481" x2="567.01691" y1="304.50481" x1="440.0169" fill="#6D97AB"/>
+    <line stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="308.77037" x2="669.01691" y1="76.50481" x1="669.01691" fill="#6D97AB"/>
+    <line transform="rotate(-77.9205 625.517 346.505)" stroke="#00ffff" stroke-width="20" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="394.50481" x2="689.01691" y1="298.50481" x1="562.0169" fill="#6D97AB"/>
    </g>
   </g>
  </g>

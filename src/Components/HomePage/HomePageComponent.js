@@ -3,10 +3,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Rating from '@mui/material/Rating';
 import FormInitialComponent from "../FormInitial/FormInitialComponent";
 import {Component} from "react";
-class HomePage extends Component{
-    constructor(props) {
-        super(props);
-    }
+class HomePageComponent extends Component{
     render () {
        return ( <div>
             <div className="Body-Image">
@@ -37,4 +34,4 @@ class HomePage extends Component{
     }
 }
 
-export default HomePage;
+export default HomePageComponent;

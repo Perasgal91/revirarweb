@@ -3,31 +3,68 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 10vh;
+  display: block;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 10px;
+}
+
+.App-header-colors{ background-color: #282c34;
+  color: white;
+}
+
+.App-body{
+  min-height: 40vh;
+}
+
+.Title-letters{
+  font-family: Serif;
+}
+
+.Title-big{
+  font-size: xx-large;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.Body-Image{
+  background-image: url("images/office-1.jpg");
+  background-size: cover;
+  height: 30vh;
+}
+
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.ul-ml{
+  display: inline-block;
+  padding-top: 1em;
+  margin-block-start: 0em;
+  margin-right: 3em;
+}
+li{
+  text-align: initial;
+  padding-bottom: 1em;
+}
+.Stars-Text{
+  font-size: 10px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

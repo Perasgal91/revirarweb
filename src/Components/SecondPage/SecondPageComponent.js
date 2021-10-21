@@ -1,47 +1,88 @@
 import "./SecondPageStyles.css";
 import "react-app-polyfill/ie11";
-import {
-    createFormModel,
-    Field,
-    Formst,
-    observer,
-    Instance,
-    types
-} from "formst";
 
-import { send } from 'emailjs-com';
 import {Component} from "react";
- class SecondPage extends Component{
+import {withRouter} from "react-router-dom";
+import {send} from "emailjs-com";
+ class SecondPageComponent extends Component{
+
+     constructor(props) {
+         super(props);
+         this.state = {meters: '',
+             rooms:'',
+             exterior:'',
+             bathrooms:'',
+         boughtAt:'',
+         condition:'',
+         liveIn:'',
+         valuePrice:'',
+         valuePriceReason:''};
+
+         this.handleChange = this.handleChange.bind(this);
+         this.handleSubmit = this.handleSubmit.bind(this);
+     }
+
+     handleChange(event) {
+         const target = event.target;
+         const value = target.type === 'checkbox' ? target.checked : target.value;
+         const name = target.name;
+
+         this.setState({
+             [name]: value
+         });
+     }
+
+     handleSubmit(event) {
+         event.preventDefault();
+         const data = {
+             meters: this.state.meters,
+             rooms: this.state.rooms,
+             exterior: this.state.exterior,
+             bathrooms: this.state.bathrooms,
+             boughtAt: this.state.boughtAt,
+             condition: this.state.condition,
+             liveIn: this.state.liveIn,
+             valuePrice: this.state.valuePrice,
+             valuePriceReason: this.state.valuePriceReason,
+         }
+
+         send('service_eboaerg', 'template_nqjkcjq', data, 'user_CFcGpnhJSDxRrmxNHmhVN')
+             .then((result) => {
+                 this.props.history.push("/third");
+             }, (error) => {
+                 alert("Inténtelo de nuevo, ha habido un error");
+             });
+     }
 
      render() {
          return (
-                     <form onSubmit={secondPage.handleSubmit}>
+                     <form onSubmit={this.handleSubmit}>
                          <label>
                              Metros Cuadrados:
-                             <Field
+                             <input
                                  type="text"
                                  id="meters"
                                  name="meters"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              />
                          </label>
 
                          <label>
                              Habitaciones:
-                             <Field
+                             <input
                                  type="text"
                                  id="rooms"
                                  name="rooms"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
                              Cuantas habitaciones son exteriores:
-                             <Field
+                             <input
                                  type="text"
                                  id="exterior"
                                  name="exterior"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              />
                          </label>
 
@@ -51,7 +92,7 @@ import {Component} from "react";
                                  type="text"
                                  id="bathrooms"
                                  name="bathrooms"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
@@ -60,7 +101,7 @@ import {Component} from "react";
                                  type="text"
                                  id="boughtAt"
                                  name="boughtAt"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
@@ -69,7 +110,7 @@ import {Component} from "react";
                                  type="text"
                                  id="condition"
                                  name="condition"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
@@ -78,7 +119,7 @@ import {Component} from "react";
                                  type="text"
                                  id="liveIn"
                                  name="liveIn"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
                          <label>
@@ -87,7 +128,7 @@ import {Component} from "react";
                                  type="text"
                                  id="valuePrice"
                                  name="valuePrice"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
                          <label>
                              Porqué piensa que tiene ese valor:
@@ -95,11 +136,13 @@ import {Component} from "react";
                                  type="text"
                                  id="valuePriceReason"
                                  name="valuePriceReason"
-                                 placeholder=""
+                                 placeholder=""onChange={this.handleChange}
                              /></label>
 
-                         <input type="submit" value="Pedir Oferta"/>
+                         <input type="submit" value="Enviar Datos"/>
                      </form>
          );
      }
 }
+
+export default withRouter(SecondPageComponent);
