@@ -1,4 +1,4 @@
-import logo from './images/svg.svg';
+import logo from './images/logo-white.png';
 import './App.css';
 import HomePageComponent from "./Components/HomePage/HomePageComponent";
 import {
@@ -13,9 +13,6 @@ function App() {
       <header className="App-header">
           <div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="Title-letters Title-big">
-          Revirar Casas
-        </p>
           </div>
           <p className="Title-letters">
               Compramos tu vivienda en cualquier estado
