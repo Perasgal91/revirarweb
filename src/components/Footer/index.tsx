@@ -105,10 +105,10 @@ const Footer = ({ t }: any) => {
               </LogoContainer>
             </NavLink>
             <FooterContainer>
-              <SocialLink
+              {/* <SocialLink
                 href="https://www.linkedin.com/in/lasha-kakabadze/"
                 src="linkedin.svg"
-              />
+              /> */}
             </FooterContainer>
           </Row>
         </Container>
