@@ -1,0 +1,16 @@
+{
+  "title": "Rápido, detallado y claro",
+  "text": "No perdemos nuestro tiempo ni el de nuestros clientes. A nadie le gusta esperar.",
+  "section": [
+    {
+      "title": "Porqué Revirar Casas?",
+      "content": "Te diremos francamente la mejor solución y tiempos estimados ateniéndonos a tus requisitos.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Por qué no?",
+      "content": "No nos andamos con rodeos, quizás no somos la mejor empresa para sus necesidades, en ese caso se lo diremos.",
+      "icon": "notes.svg"
+    }
+  ]
+}
