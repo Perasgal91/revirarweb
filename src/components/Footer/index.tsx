@@ -27,7 +27,7 @@ const Footer = ({ t }: any) => {
   //   i18n.changeLanguage(language);
   // };
 
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
+  /* const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
       <a
         href={href}
@@ -39,7 +39,7 @@ const Footer = ({ t }: any) => {
         <SvgIcon src={src} width="25px" height="25px" />
       </a>
     );
-  };
+  }; */
 
   return (
     <>
