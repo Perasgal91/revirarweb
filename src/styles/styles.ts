@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
 
+    #root {
+        white-space: pre-line;
+    }
+
     @font-face {
         font-family: "Motiva Sans Light";
         src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");

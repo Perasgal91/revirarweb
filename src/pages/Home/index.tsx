@@ -5,6 +5,7 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
+import CookieConsent from "react-cookie-consent";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -16,6 +17,17 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
+      <CookieConsent
+        location="top"
+        buttonText="Leído"
+        cookieName="revirar-casas-cookie"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#18216d", fontSize: "13px" }}
+        expires={150}
+      >
+        Esta web utiliza cookies para mejorar su experiencia.{" "}
+        <span style={{ fontSize: "10px" }}>Al utilizarla está aceptando su utilización.</span>
+      </CookieConsent>
       <ContentBlock
         type="right"
         title={IntroContent.title}
