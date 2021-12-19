@@ -25,8 +25,7 @@ const Home = () => {
         buttonStyle={{ color: "#18216d", fontSize: "13px" }}
         expires={150}
       >
-        Esta web utiliza cookies para mejorar su experiencia.{" "}
-        <span style={{ fontSize: "10px" }}>Al utilizarla está aceptando su utilización.</span>
+        Esta web utiliza cookies para mejorar su experiencia.
       </CookieConsent>
       <ContentBlock
         type="right"
