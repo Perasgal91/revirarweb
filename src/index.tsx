@@ -5,6 +5,10 @@ import "antd/dist/antd.css";
 
 import Router from "./router";
 import i18n from "./translation";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize("UA-215731572-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => (
   <BrowserRouter>
