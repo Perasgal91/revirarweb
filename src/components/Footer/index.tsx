@@ -80,9 +80,9 @@ const Footer = ({ t }: any) => {
               <Large left="true" to="/">
                 {t("Careers & Culture")}
               </Large>
-              <Large left="true" to="/">
+              {/* <Large left="true" to="/">
                 {t("Customer Support")}
-              </Large>
+              </Large> */}
             </Col>
           </Row>
         </Container>
